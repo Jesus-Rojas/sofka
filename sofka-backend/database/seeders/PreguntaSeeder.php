@@ -33,7 +33,7 @@ class PreguntaSeeder extends Seeder
         ];
         $js = [
             [
-                'nombre' => '¿Qué es JavaScript?',
+                'nombre' => '¿JavaScript es un lenguaje de programación ...?',
                 'categorias_id' => 2,
             ],
             [
