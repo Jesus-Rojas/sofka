@@ -6,24 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateOpcionesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('opciones', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->boolean('correcta');
+            // foraneas
+            $table->foreignId('preguntas_id')
+            ->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('opciones');

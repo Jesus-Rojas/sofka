@@ -14,8 +14,13 @@ class Opcion extends Model
         'preguntas_id',
         'correcta',
     ];
+    protected $table = 'opciones';
 
     public function preguntas(){
         return $this->belongsTo(Pregunta::class);
+    }
+
+    public function rondaPreguntaIntentos(){
+        return $this->hasMany(RondaPreguntaIntento::class, 'opciones_id');
     }
 }
