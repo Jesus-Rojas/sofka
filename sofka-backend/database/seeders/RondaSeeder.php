@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\Ronda;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class RondaSeeder extends Seeder
 {
     public function run()
     {

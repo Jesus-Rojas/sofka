@@ -5,14 +5,14 @@ namespace Database\Seeders;
 use App\Models\Categoria;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class CategoriaSeeder extends Seeder
 {
     public function run()
     {
         $categorias = [
             'Laravel',
             'Js',
-            'Html',
+            'Html5',
             'Css',
             'Angular',
         ];
