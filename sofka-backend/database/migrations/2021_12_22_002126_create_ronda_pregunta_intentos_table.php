@@ -13,22 +13,22 @@ class CreateRondaPreguntaIntentosTable extends Migration
             // foraneas
             $table->foreignId('opciones_id')
             ->nullable()
-            ->constrained()
+            ->constrained('opciones')
             ->onUpdate('cascade')
             ->onDelete('cascade');
 
             $table->foreignId('rondas_id')
-            ->constrained()
+            ->constrained('rondas')
             ->onUpdate('cascade')
             ->onDelete('cascade');
 
             $table->foreignId('preguntas_id')
-            ->constrained()
+            ->constrained('preguntas')
             ->onUpdate('cascade')
             ->onDelete('cascade');
 
             $table->foreignId('intentos_id')
-            ->constrained()
+            ->constrained('intentos')
             ->onUpdate('cascade')
             ->onDelete('cascade');
 

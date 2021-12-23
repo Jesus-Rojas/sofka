@@ -13,7 +13,7 @@ class CreatePreguntasTable extends Migration
             $table->string('nombre');
             // foraneas
             $table->foreignId('categorias_id')
-            ->constrained()
+            ->constrained('categorias')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->timestamps();

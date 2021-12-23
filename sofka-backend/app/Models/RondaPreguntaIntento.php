@@ -10,7 +10,6 @@ class RondaPreguntaIntento extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
         'preguntas_id',
         'rondas_id',
         'opciones_id',
@@ -34,6 +33,6 @@ class RondaPreguntaIntento extends Model
     }
 
     public function premios(){
-        return $this->hasOne(Premio::class, 'ronda_pregunta_intentos_id');
+        return $this->hasMany(Premio::class, 'ronda_pregunta_intentos_id');
     }
 }

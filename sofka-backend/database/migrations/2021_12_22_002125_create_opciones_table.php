@@ -14,7 +14,7 @@ class CreateOpcionesTable extends Migration
             $table->boolean('correcta');
             // foraneas
             $table->foreignId('preguntas_id')
-            ->constrained()
+            ->constrained('preguntas')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->timestamps();

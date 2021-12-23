@@ -87,12 +87,12 @@ class OpcionSeeder extends Seeder
             ],
             [
                 'preguntas_id' => 4,
-                'nombre' => 'es una técnica de programación para convertir datos entre un lenguaje de programación orientado a procedimientos y una base de datos relacional como motor de persistencia.',
+                'nombre' => 'Es una técnica de programación para convertir datos entre un lenguaje de programación orientado a procedimientos y una base de datos relacional como motor de persistencia.',
                 'correcta' => false,
             ],
             [
                 'preguntas_id' => 4,
-                'nombre' => 'es una técnica de programación para convertir datos entre un lenguaje de programación orientado a procedimientos y una base de datos no relacional como motor de persistencia.',
+                'nombre' => 'Es una técnica de programación para convertir datos entre un lenguaje de programación orientado a procedimientos y una base de datos no relacional como motor de persistencia.',
                 'correcta' => false,
             ],
             [
@@ -271,12 +271,12 @@ class OpcionSeeder extends Seeder
             ],
             [
                 'preguntas_id' => 12,
-                'nombre' => 'A. Si, porque toda etiqueta debe tener cierre',
+                'nombre' => 'Si, porque toda etiqueta debe tener cierre',
                 'correcta' => false,
             ],
             [
                 'preguntas_id' => 12,
-                'nombre' => 'B. Si, porque un amigo me dijo',
+                'nombre' => 'Si, porque un amigo me dijo',
                 'correcta' => false,
             ],
             [

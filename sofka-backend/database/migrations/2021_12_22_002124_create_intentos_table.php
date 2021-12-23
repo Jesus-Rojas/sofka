@@ -10,10 +10,9 @@ class CreateIntentosTable extends Migration
     {
         Schema::create('intentos', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
             // foraneas
             $table->foreignId('jugadores_id')
-            ->constrained()
+            ->constrained('jugadores')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->timestamps();

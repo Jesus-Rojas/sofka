@@ -10,9 +10,8 @@ class Premio extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
         'jugadores_id',
-        'ronda_pregunta_jugadores_id',
+        'ronda_pregunta_intentos_id',
         'puntuacion',
         'termino',
     ];

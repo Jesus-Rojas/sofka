@@ -10,16 +10,16 @@ class CreatePremiosTable extends Migration
     {
         Schema::create('premios', function (Blueprint $table) {
             $table->id();
-            $table->float('puntuacion');
+            $table->integer('puntuacion');
             $table->boolean('termino');
             // foraneas
             $table->foreignId('jugadores_id')
-            ->constrained()
+            ->constrained('jugadores')
             ->onUpdate('cascade')
             ->onDelete('cascade');
 
             $table->foreignId('ronda_pregunta_intentos_id')
-            ->constrained()
+            ->constrained('ronda_pregunta_intentos')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             
