@@ -9,26 +9,26 @@ import { ApiUserService } from '../api/api-user.service';
 })
 export class LogicUserService {
 
-  usuarioSubject = new Subject<Usuario>();
+  usuarioSubject = new Subject<string>();
   usuario = this.usuarioSubject.asObservable();
 
   constructor( private api: ApiUserService, private router:Router ) { }
 
   getDataUser(datos: DatosUsuario){
-    this.api.getData(datos).subscribe( data => {
-      localStorage.setItem('jugador', JSON.stringify(data))
-      this.usuarioSubject.next(data);
+    this.api.getData(datos).subscribe( ({ nombre }) => {
+      localStorage.setItem('jugador', nombre)
+      this.usuarioSubject.next(nombre);
       this.router.navigateByUrl('/cuestionario')
     })
   }
 
   getDataUserLogin(){
-    const { nombre } = JSON.parse(localStorage.getItem('jugador')!);
+    const nombre = localStorage.getItem('jugador')!;
     const datos = {
       nombre: nombre.trim().toLowerCase(),
     };
-    this.api.getData(datos).subscribe( data => {
-      this.usuarioSubject.next(data);
+    this.api.getData(datos).subscribe( ({ nombre }) => {
+      this.usuarioSubject.next(nombre);
     })
   }  
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LogicUserService } from '../../services/logic/logic-user.service';
 
 @Component({
   selector: 'app-home',

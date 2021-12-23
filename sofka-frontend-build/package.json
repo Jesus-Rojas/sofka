@@ -1,0 +1,10 @@
+{
+  "name": "sofka-frontend-build",
+  "version": "1.0.0",
+  "description": "Dejando por default el http-server",
+  "dependencies": {
+    "http-server": "~14.0.0"
+  },
+  "author": "Jesus - Rojas",
+  "license": "ISC"
+}

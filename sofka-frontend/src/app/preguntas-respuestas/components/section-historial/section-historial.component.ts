@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiHistorialService } from '../../services/api/api-historial.service';
+import { Jugadores } from '../../interfaces/historial.interface';
 
 @Component({
   selector: 'app-section-historial',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionHistorialComponent implements OnInit {
 
-  constructor() { }
+  jugadores !: Jugadores[];
+  constructor( private apiHistorial: ApiHistorialService ) { }
 
   ngOnInit(): void {
+    this.apiHistorial.historial().subscribe( data => {
+      this.jugadores = data;
+    })
   }
-
 }

@@ -24,7 +24,7 @@ export class SectionIngresoComponent implements OnInit  {
   startGame(){
     if (this.nombre.length > 0) {
       const datos = {
-        nombre: this.nombre.toLowerCase()
+        nombre: this.nombre.trim().toLowerCase()
       };
       this.logicUser.getDataUser(datos);
     }

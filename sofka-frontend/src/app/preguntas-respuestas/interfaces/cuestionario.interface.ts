@@ -1,27 +1,32 @@
-export interface Pregunta {
-
+export interface Intento {
+    id: number;
+    intentos_id: number;
+    preguntas: Preguntas;
+    preguntas_id: number;
+    rondas: Ronda;
+    rondas_id: number;
 }
 
-export interface RondaPreguntaIntentos {
-    
+export interface Ronda {
+    id: number;
+    nombre: string;
 }
 
-export interface Premios {
-    
-}
-
-export interface Rondas {
-    
-}
-
-export interface Categorias {
-    
+export interface Preguntas {
+    id: number;
+    nombre: string;
+    opciones: Opciones[];
 }
 
 export interface Opciones {
-    
+    id: number;
+    nombre: string;
+    preguntas_id: number;
+    disabled?: boolean;
 }
 
-export interface Intentos {
-    
+export interface Respuesta {
+    termino: boolean;
+    res?: boolean;
+    pregunta?: Intento;
 }
