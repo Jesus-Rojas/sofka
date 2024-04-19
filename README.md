@@ -4,6 +4,11 @@
     </a>
 </p>
 
+### Sync submodules
+```console
+unknown@unknown$ git submodule update --recursive --remote
+```
+
 ## Preguntas-Respuestas - By Rojas
 
 Este proyecto fue realizado en Angular 12 y Laravel 8.
