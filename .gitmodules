@@ -1,3 +1,6 @@
 [submodule "sofka-backend"]
 	path = sofka-backend
 	url = https://github.com/Jesus-Rojas/sofka-backend
+[submodule "sofka-frontend"]
+	path = sofka-frontend
+	url = https://github.com/Jesus-Rojas/sofka-frontend
